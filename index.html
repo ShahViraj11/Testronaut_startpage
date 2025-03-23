@@ -1,159 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testronaut</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Gold: #b7913e
-           Black: #000000
-           White: #ffffff */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .bg-black {
-            background-color: #252525;
-        }
-        .text-black {
-            color: #252525;
-        }
-        .bg-white {
-            background-color: #ffffff;
-        }
-        .text-white{
-            color: #ffffff;
-        }
-        .text-gold {
-            color: #b7913e;
-        }
-        .bg-gold{
-            background-color: #b7913e;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testronaut</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Gold: #b7913e
+       Black: #000000
+       White: #ffffff */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .bg-black {
+      background-color: #252525;
+    }
+    .text-black {
+      color: #252525;
+    }
+    .bg-white {
+      background-color: #ffffff;
+    }
+    .text-white {
+      color: #ffffff;
+    }
+    .text-gold {
+      color: #b7913e;
+    }
+    .bg-gold {
+      background-color: #b7913e;
+    }
+  </style>
 </head>
 <body class="bg-black text-gold">
-    <header class="bg-black bg-opacity-75 py-4">
-        <div class="container mx-auto px-4 text-center">
-            <img src="logo.png" alt="Testronaut Logo" class="w-64 mx-auto">
-            <h1 class="text-6xl font-seibold text-center text-gold">Testronaut</h1>
-            <br><br>
+  <header class="bg-black bg-opacity-75 py-4">
+    <div class="container mx-auto px-4 text-center">
+      <img src="logo.png" alt="Testronaut Logo" class="w-64 mx-auto" />
+      <h1 class="text-6xl font-seibold text-center text-gold">Testronaut</h1>
+      <br /><br />
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-10 text-center">
+    <div class="text-center">
+      <h2 class="text-4xl font-semibold mb-4 text-gold">Your AI-Powered Development Assistant</h2>
+      <p class="text-xl text-gold mb-8">
+        Testronaut is a terminal application that leverages the power of Google Gemini to enhance your development workflow.
+      </p>
+      <!-- Installation Command with Copy Button -->
+      <div class="bg-black rounded-lg p-6 mb-8 bg-opacity-90">
+        <div class="flex items-center justify-center sm:justify-between">
+          <pre class="text-white text-lg overflow-x-auto m-0 p-2" id="install-command">
+pip install testronaut
+          </pre>
+          <button onclick="copyToClipboard()" class="ml-4 bg-gold text-black px-3 py-1 rounded">
+            Copy
+          </button>
         </div>
-    </header>
+        <p class="text-gold text-lg mt-4">
+          Install Testronaut with pip and revolutionize your development process.
+        </p>
+      </div>
+    </div>
 
-    <main class="container mx-auto px-4 py-10 text-center">
-        <div class="text-center">
-            <h2 class="text-4xl font-semibold mb-4 text-gold">Your AI-Powered Development Assistant</h2>
-            <p class="text-xl text-gold mb-8">
-                Testronaut is a terminal application that leverages the power of Google Gemini to enhance your development workflow.
-            </p>
-            <div class="bg-black rounded-lg p-6 mb-8 bg-opacity-90 relative">
-    <pre class="text-white text-lg overflow-x-auto">
-        <code id="install-command">pip install testronaut</code>
-    </pre>
-    <button onclick="copyToClipboard()" class="absolute top-2 right-2 bg-gold text-black px-3 py-1 rounded">
-        Copy
-    </button>
-</div>
+    <section class="my-16">
+      <br /><br />
+      <h2 class="text-4xl font-semibold text-center mb-8 text-gold">Features</h2>
+      <div class="grid grid-cols-1 gap-8">
+        <div class="bg-black rounded-lg p-6 bg-opacity-90">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2 text-center">
+              <h3 class="text-2xl font-semibold mb-4 text-gold">Test Case Generation</h3>
+              <p class="text-gold text-lg">Automatically generate test cases to ensure code reliability.</p>
+            </div>
+            <div class="md:w-1/2">
+              <img src="tests.png" alt="Test Case Generation Example" class="rounded-md h-128 mx-auto" />
+            </div>
+          </div>
+        </div>
+        <div class="bg-black rounded-lg p-6 bg-opacity-90">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2 text-center">
+              <h3 class="text-2xl font-semibold mb-4 text-gold">Code Performance Analysis</h3>
+              <p class="text-gold text-lg">Identify bottlenecks and optimize your code's performance.</p>
+            </div>
+            <div class="md:w-1/2">
+              <img src="Code_performance.png" alt="Code Performance Analysis Example" class="rounded-md w-128 mx-auto" />
+            </div>
+          </div>
+        </div>
+        <div class="bg-black rounded-lg p-6 bg-opacity-90">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2 text-center">
+              <h3 class="text-2xl font-semibold mb-4 text-gold">Code Refactoring</h3>
+              <p class="text-gold text-lg">Improve code readability and maintainability with AI-powered refactoring.</p>
+            </div>
+            <div class="md:w-1/2">
+              <img src="code_refactor.png" alt="Code Refactoring Example" class="rounded-md w-128 mx-auto" />
+            </div>
+          </div>
+        </div>
+        <div class="bg-black rounded-lg p-6 bg-opacity-90">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2 text-center">
+              <h3 class="text-2xl font-semibold mb-4 text-gold">CI/CD Pipeline Check</h3>
+              <p class="text-gold text-lg">Ensure smooth deployments with CI/CD pipeline checks.</p>
+            </div>
+            <div class="md:w-1/2">
+              <img src="optim_pipe.png" alt="CI/CD Pipeline Check Example" class="rounded-md w-128 mx-auto" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-  function copyToClipboard() {
+    <section class="my-16">
+      <br /><br />
+      <h2 class="text-4xl font-semibold text-center mb-8 text-gold">How to Use</h2>
+      <div class="bg-black rounded-lg p-6 bg-opacity-90 text-center">
+        <ol class="list-decimal list-inside space-y-4 text-gold text-lg">
+          <li>
+            Install Testronaut:
+            <code class="text-white">pip install testronaut</code>
+          </li>
+          <li>Configure your Google Gemini API key.</li>
+          <li>Use the terminal commands to access Testronaut's features.</li>
+        </ol>
+        <p class="text-gold text-xl mt-6">
+          For detailed instructions and command-line options, refer to the documentation.
+        </p>
+      </div>
+    </section>
+
+    <section class="my-16">
+      <h2 class="text-4xl font-semibold text-center mb-8 text-gold">About Testronaut</h2>
+      <p class="text-xl text-gold text-center">
+        Testronaut is an open-source project aimed at empowering developers with AI-driven tools.
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-black bg-opacity-75 py-4 mt-10">
+    <div class="container mx-auto px-4 text-center text-gold">
+      &copy; 2025 Testronaut. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    function copyToClipboard() {
+      // Retrieve the command text
       const command = document.getElementById('install-command').innerText.trim();
+      // Use the Clipboard API to write the text
       navigator.clipboard.writeText(command)
-          .then(() => {
-              // Optionally, change the button text or add a visual cue
-              console.log('Copied to clipboard!');
-          })
-          .catch(err => {
-              console.error('Failed to copy text: ', err);
-          });
-  }
-</script>
-
-        <section class="my-16">
-            <br><br>
-            <h2 class="text-4xl font-semibold text-center mb-8 text-gold">Features</h2>
-            <div class="grid grid-cols-1 gap-8">
-                <div class="bg-black rounded-lg p-6 bg-opacity-90">
-                    <div class="flex flex-col md:flex-row items-center gap-8">
-                        <div class="md:w-1/2 text-center">
-                            <h3 class="text-2xl font-semibold mb-4 text-gold">Test Case Generation</h3>
-                            <p class="text-gold text-lg">Automatically generate test cases to ensure code reliability.</p>
-                        </div>
-                        <div class="md:w-1/2">
-                            <img src="tests.png" alt="Test Case Generation Example" class="rounded-md h-128 mx-auto">
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-black rounded-lg p-6 bg-opacity-90">
-                    <div class="flex flex-col md:flex-row items-center gap-8">
-                        <div class="md:w-1/2 text-center">
-                            <h3 class="text-2xl font-semibold mb-4 text-gold">Code Performance Analysis</h3>
-                            <p class="text-gold text-lg">Identify bottlenecks and optimize your code's performance.</p>
-                        </div>
-                        <div class="md:w-1/2">
-                            <img src="Code_performance.png" alt="Code Performance Analysis Example" class="rounded-md w-128 mx-auto">
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-black rounded-lg p-6 bg-opacity-90">
-                    <div class="flex flex-col md:flex-row items-center gap-8">
-                        <div class="md:w-1/2 text-center">
-                            <h3 class="text-2xl font-semibold mb-4 text-gold">Code Refactoring</h3>
-                            <p class="text-gold text-lg">Improve code readability and maintainability with AI-powered refactoring.</p>
-                        </div>
-                        <div class="md:w-1/2">
-                            <img src="code_refactor.png" alt="Code Refactoring Example" class="rounded-md w-128 mx-auto">
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-black rounded-lg p-6 bg-opacity-90">
-                    <div class="flex flex-col md:flex-row items-center gap-8">
-                        <div class="md:w-1/2 text-center">
-                            <h3 class="text-2xl font-semibold mb-4 text-gold">CI/CD Pipeline Check</h3>
-                            <p class="text-gold text-lg">Ensure smooth deployments with CI/CD pipeline checks.</p>
-                        </div>
-                        <div class="md:w-1/2">
-                           <img src="optim_pipe.png" alt="CI/CD Pipeline Check Example" class="rounded-md w-128 mx-auto">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="my-16">
-            <br><br>
-            <h2 class="text-4xl font-semibold text-center mb-8 text-gold">How to Use</h2>
-            <div class="bg-black rounded-lg p-6 bg-opacity-90 text-center">
-                <ol class="list-decimal list-inside space-y-4 text-gold text-lg">
-                    <li>Install Testronaut: <code class="text-white">pip install testronaut</code>
-                    </li>
-                    <li>Configure your Google Gemini API key.</li>
-                    <li>Use the terminal commands to access Testronaut's features.</li>
-                </ol>
-                <p class="text-gold text-xl mt-6">
-                    For detailed instructions and command-line options, refer to the documentation.
-                </p>
-            </div>
-        </section>
-
-        <section class="my-16">
-            <h2 class="text-4xl font-semibold text-center mb-8 text-gold">About Testronaut</h2>
-            <p class="text-xl text-gold text-center">
-                Testronaut is an open-source project aimed at empowering developers with AI-driven tools.
-            </p>
-        </section>
-    </main>
-
-    <footer class="bg-black bg-opacity-75 py-4 mt-10">
-        <div class="container mx-auto px-4 text-center text-gold">
-            &copy; 2025 Testronaut. All rights reserved.
-        </div>
-    </footer>
-
-
+        .then(() => {
+          alert('Command copied to clipboard!');
+        })
+        .catch(err => {
+          console.error('Failed to copy text: ', err);
+        });
+    }
+  </script>
 </body>
 </html>
